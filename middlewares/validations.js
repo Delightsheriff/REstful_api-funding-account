@@ -47,11 +47,11 @@ const validateTouristSignup = (req, res, next) => {
 
 //tourist login validation
 const validateTouristLogin = (req, res, next) => {
-  const { passkey, email } = req.body;
+  const { password, email } = req.body;
 
   error = [];
 
-  if (!passkey) {
+  if (!password) {
     error.push("Please enter a password.");
   }
   if (!email) {

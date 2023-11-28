@@ -6,8 +6,10 @@ connectDB();
 app.use(express.json());
 
 const touristRoutes = require("./routes/touristRouter");
+const walletRoutes = require("./routes/walletRouter");
 
 app.use("/api", touristRoutes);
+app.use("/api/uba", walletRoutes);
 
 const PORT = process.env.PORT || 5000;
 //APIS
